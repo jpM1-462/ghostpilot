@@ -31,10 +31,10 @@ def set_long_tune(tune, name):
   if name == LongTunes.TSS2 or name == LongTunes.PEDAL:
     tune.deadzoneBP = [0., 8.05]
     tune.deadzoneV = [.0, .14]
-    tune.kpBP = [0., 5., 20.]
-    tune.kpV = [1.3, 1.0, 0.7]
-    tune.kiBP = [0., 5., 12., 20., 27.]
-    tune.kiV = [.35, .23, .20, .17, .1]
+    tune.kpBP = [0., 2.8, 17., 25., 36.]
+    tune.kpV = [2.0, 0.5, 0.008, 0.0015, 0.0015]
+    tune.kiBP = [0., 13., 20., 30., 40.]
+    tune.kiV = [.008, .01, .12, .001, .0001]
   # Default longitudinal tune
   elif name == LongTunes.TSS:
     tune.deadzoneBP = [0., 9.]
@@ -82,9 +82,9 @@ def set_lat_tune(tune, name, MAX_LAT_ACCEL=2.5, FRICTION=0.01, steering_angle_de
       tune.pid.kiV = [0.05]
       tune.pid.kf = 0.00004
     elif name == LatTunes.PID_J:
-      tune.pid.kpV = [0.19]
+      tune.pid.kpV = [0.13]
       tune.pid.kiV = [0.02]
-      tune.pid.kf = 0.00007818594
+      tune.pid.kf = 0.00004
     elif name == LatTunes.PID_L:
       tune.pid.kpV = [0.3]
       tune.pid.kiV = [0.05]
